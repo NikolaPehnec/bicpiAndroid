@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storeLayoutView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.StoreActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="Tip artikla"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:cardBackgroundColor="@color/colorLightGray2"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTip"
+            app:layout_constraintStart_toEndOf="@+id/textViewTip"
+            app:layout_constraintTop_toTopOf="@+id/textViewTip">
+
+            <Spinner
+                android:id="@+id/tipArtiklaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="Grupa"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTip" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nazivGrupeTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Naziv nove grupe"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewTip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <EditText
+                android:id="@+id/nazivGrupe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zapisiGrupuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="SPREMI"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/novaGrupaButton"
+            app:layout_constraintStart_toEndOf="@+id/novaGrupaButton"
+            app:layout_constraintTop_toTopOf="@+id/novaGrupaButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/novaGrupaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/colorGreen"
+            android:text="Dodaj novu grupu"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nazivGrupeTL" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            app:cardBackgroundColor="@color/colorLightGray2"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView">
+
+            <Spinner
+                android:id="@+id/grupaArtiklaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/RVview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/noviArtiklButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zapisiGrupuButton">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textStoreView" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/noviArtiklButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/colorGreen"
+            android:text="Dodaj novi artikl"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/nazivArtiklTL"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zapisiArtiklButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="SPREMI"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/updateArtiklButton"
+            app:layout_constraintStart_toEndOf="@+id/noviArtiklButton"
+            app:layout_constraintTop_toTopOf="@+id/noviArtiklButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateArtiklButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorLightGray"
+            android:text="UPDATE"
+            android:textColor="@color/colorBlack"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/zapisiArtiklButton"
+            app:layout_constraintTop_toTopOf="@+id/noviArtiklButton" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nazivArtiklTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="Naziv"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/opisArtiklTL"
+            app:layout_constraintEnd_toStartOf="@+id/cijenaArtiklTL"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/nazivArtikl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cijenaArtiklTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Cijena"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/opisArtiklTL"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toEndOf="@+id/nazivArtiklTL">
+
+            <EditText
+                android:id="@+id/cijenaArtikl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewTip2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/colorLightGray2"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cijenaArtiklTL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/cijenaArtiklTL">
+
+            <Spinner
+                android:id="@+id/tipArtiklaSpinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/kolicinaArtiklTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Kol."
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/kolArtikl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/opisArtiklTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Opis"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline">
+
+            <EditText
+                android:id="@+id/opisArtikl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/storePB"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/RVview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStoreView" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/drawable/button_round_light.xml" value="0.3585" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/drawable/spinner_border.xml" value="0.256" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_add_paper.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_basket.xml" value="0.18213925327951563" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_extra_services_admin.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_purchase.xml" value="0.25" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/activity_store.xml" value="0.33" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/artikl_view.xml" value="0.33" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/context_frame.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/custom_simple_spinner_dropdown_item.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/custom_simple_spinner_item.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/dimension_prompt.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/extra_service.xml" value="0.25" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/paper_view.xml" value="0.33" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/picture_prompt.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Nikola/AndroidStudioProjects/BICPI/App/app/src/main/res/layout/transaction_view.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
